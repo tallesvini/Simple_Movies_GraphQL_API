@@ -2,9 +2,6 @@
 "functions": {
     "FilmsCatalog.API/Controllers/GraphQLController.cs": {
       "runtime": "dotnet6",
-      "includeFiles": [
-        "bin/**/*",
-        "obj/**/*"
-      ]
+      "includeFiles": "bin/**/*"
     }
 }
