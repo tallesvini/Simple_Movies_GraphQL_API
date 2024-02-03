@@ -1,7 +1,8 @@
 {
-"functions": {
-    "FilmsCatalog.API/Program.cs": {
+  "functions": {
+    "FilmsCatalog.API/Controllers/GraphQLController.cs": {
       "runtime": "dotnet6",
-      "includeFiles": "bin/**/*"
+      "includeFiles": ["bin/**/*"]
     }
+  }
 }
