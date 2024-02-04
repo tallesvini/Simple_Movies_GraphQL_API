@@ -1,7 +1,6 @@
 ﻿using FilmsCatalog.DataAccess.Repositories.Interfaces;
 using FilmsCatalog.Database;
 using FilmsCatalog.Database.Entities;
-using Microsoft.EntityFrameworkCore;
 
 namespace FilmsCatalog.DataAccess.Repositories
 {
@@ -14,9 +13,9 @@ namespace FilmsCatalog.DataAccess.Repositories
             _dbContext = dbcontext;
         }
 
-        public async Task<IEnumerable<Movie>> GetAllForCategories(int categoryId)
-        {
-            return await _dbContext.Movies.Where(x => x.CategoryId == categoryId).ToListAsync();
-        }
-    }
+		public IList<Movie> GetAllForCategories(int? categoryId)
+		{
+			return _dbContext.Movies.Where(x => x.CategoryId == categoryId).ToList();
+		}
+	}
 }

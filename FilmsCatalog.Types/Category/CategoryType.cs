@@ -6,12 +6,12 @@ namespace FilmsCatalog.Types
 {
 	public class CategoryType : ObjectGraphType<Category>
 	{
-        public CategoryType(IMovieRepository movieRepository)
-        {
-            Field(x => x.Id);
-            Field(x => x.Name);
+		public CategoryType(IMovieRepository movieRepository)
+		{
+			Field(x => x.Id);
+			Field(x => x.Name);
 			Field<ListGraphType<MovieType>>("movies",
 				resolve: context => movieRepository.GetAllForCategories(context.Source.Id));
 		}
-    }
+	}
 }

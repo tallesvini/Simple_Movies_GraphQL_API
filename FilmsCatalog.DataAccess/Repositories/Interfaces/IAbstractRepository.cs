@@ -5,7 +5,7 @@ namespace FilmsCatalog.DataAccess.Repositories.Interfaces
 	public interface IAbstractRepository<TEntity> 
 		where TEntity : class
 	{
-		Task<IList<TEntity>> GetAsync();
+		IQueryable<TEntity> GetAsync();
 		Task<TEntity> GetByIdAsync(Expression<Func<TEntity, bool>> predicate);
 		Task<TEntity> AddAsync(TEntity entity);
 		Task<TEntity> UpdateAsync(TEntity entity);

@@ -1,5 +1,4 @@
-﻿using FilmsCatalog.DataAccess.Repositories;
-using FilmsCatalog.DataAccess.Repositories.Interfaces;
+﻿using FilmsCatalog.DataAccess.Repositories.Interfaces;
 using FilmsCatalog.Types;
 using GraphQL.Types;
 
@@ -18,7 +17,7 @@ namespace FilmsCatalog.API.Queries
 				resolve: context =>
 				{
 					int idMovie = context.GetArgument<int>("id");
-					return movieRepository.GetByIdAsync(x => x.Id == IdCategory);
+					return movieRepository.GetByIdAsync(x => x.Id == idMovie);
 				});
 		}
     }

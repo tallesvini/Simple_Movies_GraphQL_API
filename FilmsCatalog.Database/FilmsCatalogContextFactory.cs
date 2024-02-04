@@ -9,7 +9,7 @@ namespace FilmsCatalog.Database
 		public FilmsCatalogContext CreateDbContext(string[] args)
 		{
 			IConfigurationRoot configuration = new ConfigurationBuilder()
-				.AddJsonFile("caminho_arquivo_appsettings.json")
+				.AddJsonFile("_YOUR_PATH_APPSETTING.JSON_")
 				.Build();
 
 			var builder = new DbContextOptionsBuilder<FilmsCatalogContext>();

@@ -40,19 +40,65 @@ namespace FilmsCatalog.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId")
+                    b.Property<string>("Cast")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("CountryOfOrigin")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("varchar(512)");
+
+                    b.Property<string>("Director")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Duration")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Keywords")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Language")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Poster")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<DateTime>("ReleasedYear")
-                        .HasColumnType("datetime(6)");
+                    b.Property<string>("Rating")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ReleasedYear")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Review")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Trailer")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -65,9 +111,7 @@ namespace FilmsCatalog.Database.Migrations
                 {
                     b.HasOne("FilmsCatalog.Database.Entities.Category", "Category")
                         .WithMany("Movies")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.Navigation("Category");
                 });
