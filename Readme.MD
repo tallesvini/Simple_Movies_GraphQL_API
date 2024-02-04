@@ -1,24 +1,24 @@
 # Simple API GraphQL - Movies Catalog
 
-Esta È uma API GraphQL desenvolvida em .NET Core e MySQL, projetada para fornecer dados relacionados a filmes e categorias.
+Esta √© uma API GraphQL desenvolvida em .NET Core e MySQL, projetada para fornecer dados relacionados a filmes e categorias.
 
-## ConfiguraÁ„o
+## Configura√ß√£o
 
-Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) instalado em sua m·quina.
+Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) instalado em sua m√°quina.
 
-1. Clone este repositÛrio:
+1. Clone este reposit√≥rio:
 
    ```
    git clone https://github.com/tallesvini/Movie_GraphQL_Api.git
    ```
 
-2. Acesse o diretÛrio do projeto:
+2. Acesse o diret√≥rio do projeto:
 
    ```
    cd nome-do-repositorio
    ```
 
-3. Abra o arquivo `program.cs` e configure as informaÁıes de conex„o com o banco de dados MySQL:
+3. Abra o arquivo `program.cs` e configure as informa√ß√µes de conex√£o com o banco de dados MySQL:
 
    ```json
       "ConnectionStrings": {
@@ -26,7 +26,7 @@ Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) in
       },
    ```
 
-4. Execute as migraÁıes para criar as tabelas no banco de dados:
+4. Execute as migra√ß√µes para criar as tabelas no banco de dados:
 
    ```
    dotnet ef database update
@@ -38,17 +38,17 @@ Certifique-se de ter o [.NET Core SDK](https://dotnet.microsoft.com/download) in
    dotnet run
    ```
 
-A API estar· disponÌvel em `http://localhost:5000`.
+A API estar√° dispon√≠vel em `http://localhost:5000`.
 
 ## Requisitos de Sistema
 
 - .NET Core SDK 3.1 ou superior.
 
-# PersistÍncias:
+# Persist√™ncias:
 
 ## Create:
 
-### 1. CriaÁ„o de Category:
+### 1. Cria√ß√£o de Category:
    
 #### POST - Create Category: /graphql
 
@@ -87,7 +87,7 @@ mutation Category($category: CategoryInput!) {
 }
 ```
 
-### 2. CriaÁ„o de Movie: 
+### 2. Cria√ß√£o de Movie: 
 #### POST - Create Movie: /graphql
 
 ##### Mutation:
@@ -123,7 +123,7 @@ mutation Movies($movie: MovieInput!) {
     "movie": {
         "name": "Interestelar",
         "releasedYear": "2014",
-        "description": "ApÛs ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss„o de verificar possÌveis planetas para receberem a populaÁ„o mundial, possibilitando a continuaÁ„o da espÈcie. Cooper (Matthew McConaughey) È chamado para liderar o grupo e aceita a miss„o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir· em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir· numa prÛpria jornada para tambÈm tentar salvar a populaÁ„o do planeta.",
+        "description": "Ap√≥s ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss√£o de verificar poss√≠veis planetas para receberem a popula√ß√£o mundial, possibilitando a continua√ß√£o da esp√©cie. Cooper (Matthew McConaughey) √© chamado para liderar o grupo e aceita a miss√£o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir√° em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir√° numa pr√≥pria jornada para tamb√©m tentar salvar a popula√ß√£o do planeta.",
         "director": "Christopher Nolan",
         "rating": "14",
         "review": "4.6",
@@ -132,7 +132,7 @@ mutation Movies($movie: MovieInput!) {
         "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQmyAQu2hcbYkaBGOpDuU17xTTGILMFl4m0VfdMXI-sQ&s",
         "countryOfOrigin": "United States of America",
         "language": "English",
-        "keywords": "AÁ„o, Science, Fiction",
+        "keywords": "A√ß√£o, Science, Fiction",
         "categoryId": 8
     }
 }
@@ -144,15 +144,26 @@ mutation Movies($movie: MovieInput!) {
     "data": {
         "movieMutation": {
             "addMovie": {
-                "id": 1,
-                "name": "Velozes & Furiosos: Desafio em TÛquio.",
-                "description": "O filme destaca a cultura automotiva japonesa e È conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
-                "category": [
-                    {
-                        "id": 1,
-                        "name": "AÁ„o"
+                {
+                    "id": 13,
+                    "name": "Interestelar",
+                    "releasedYear": "2014",
+                    "description": "Ap√≥s ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss√£o de verificar poss√≠veis planetas para receberem a popula√ß√£o mundial, possibilitando a continua√ß√£o da esp√©cie. Cooper (Matthew McConaughey) √© chamado para liderar o grupo e aceita a miss√£o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir√° em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir√° numa pr√≥pria jornada para tamb√©m tentar salvar a popula√ß√£o do planeta.",
+                    "director": "Christopher Nolan",
+                    "cast": "Matthew McConaughey, Anne Hathaway, Michael Caine",
+                    "rating": "14",
+                    "review": "4.6",
+                    "duration": "2h49min",
+                    "trailer": "https://youtu.be/hHBsKHVLAYc?si=6XsHPgXEEEcHfjJ_",
+                    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQmyAQu2hcbYkaBGOpDuU17xTTGILMFl4m0VfdMXI-sQ&s",
+                    "countryOfOrigin": "United States of America",
+                    "language": "English",
+                    "keywords": "A√ß√£o, Science, Fiction",
+                    "category": {
+                        "id": 8,
+                        "name": "Fic√ß√£o"
                     }
-                ]
+                }
             }
         }
     }
@@ -180,7 +191,7 @@ mutation Category($category: CategoryUpdate!) {
 {
     "category": {
         "id": 1,
-        "name": "AÁ„o Policial"
+        "name": "A√ß√£o Policial"
     }
 }
 ```
@@ -192,7 +203,7 @@ mutation Category($category: CategoryUpdate!) {
         "categoryMutation": {
             "updateCategory": {
                 "id": 1,
-                "name": "AÁ„o Policial"
+                "name": "A√ß√£o Policial"
             }
         }
     }
@@ -234,9 +245,9 @@ mutation Movie($movie: MovieUpdate!) {
 {
     "movie": {
         "id": 1,
-        "name": "Velozes & Furiosos: Desafio em TÛquio",
+        "name": "Velozes & Furiosos: Desafio em T√≥quio",
         "releasedYear": "2006",
-        "description": "O filme destaca a cultura automotiva japonesa e È conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
+        "description": "O filme destaca a cultura automotiva japonesa e √© conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
         "director": "Justin Lin",
         "cast": "",
         "rating": "16",
@@ -246,7 +257,7 @@ mutation Movie($movie: MovieUpdate!) {
         "poster": "https://br.web.img2.acsta.net/pictures/210/383/21038387_20130909201408304.jpg",
         "countryOfOrigin": "United States of America",
         "language": "English",
-        "keywords": "AÁ„o, Policial",
+        "keywords": "A√ß√£o, Policial",
         "categoryId": 1
     }
 }
@@ -259,8 +270,8 @@ mutation Movie($movie: MovieUpdate!) {
         "movieMutation": {
             "updateMovie": {
                 "id": 1,
-                "name": "Velozes & Furiosos: Desafio em TÛquio",
-                "description": "O filme destaca a cultura automotiva japonesa e È conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
+                "name": "Velozes & Furiosos: Desafio em T√≥quio",
+                "description": "O filme destaca a cultura automotiva japonesa e √© conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
                 "releasedYear": "2006",
                 "director": "Justin Lin",
                 "rating": "16",
@@ -270,10 +281,10 @@ mutation Movie($movie: MovieUpdate!) {
                 "poster": "https://br.web.img2.acsta.net/pictures/210/383/21038387_20130909201408304.jpg",
                 "countryOfOrigin": "United States of America",
                 "language": "English",
-                "keywords": "AÁ„o, Policial",
+                "keywords": "A√ß√£o, Policial",
                 "category": {
                     "id": 1,
-                    "name": "AÁ„o"
+                    "name": "A√ß√£o"
                 }
             }
         }
@@ -389,27 +400,27 @@ query {
             "categories": [
                 {
                     "id": 1,
-                    "name": "AÁ„o",
+                    "name": "A√ß√£o",
                     "movies": [
                         {
                             "id": 1,
-                            "name": "Velozes & Furiosos: Desafio em TÛquio.",
+                            "name": "Velozes & Furiosos: Desafio em T√≥quio.",
                             "releasedYear": "2006",
-                            "description": "O filme destaca a cultura automotiva japonesa e È conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
+                            "description": "O filme destaca a cultura automotiva japonesa e √© conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
                             "director": "Justin Lin"
                         },
                         {
                             "id": 3,
                             "name": "Aquaman 2: O Reino Perdido",
                             "releasedYear": "2023",
-                            "description": "Aquaman 2 È a sequÍncia do filme Aquaman de 2018, que acompanha Arthur Curry (Jason Momoa), o filho do humano Tom Curry (Temuera Morrison) com a atlante Atlanna (Nicole Kidman). Ele cresce com a vivÍncia de um humano e as capacidades metahumanas de um atlante. Nesta sequÍncia, depois de n„o conseguir derrotar o rei dos mares pela primeira vez, Arraia Negra (Yahya Abdul-Mateen II) utiliza o poder do mÌtico Tridente Negro para liberar uma forÁa antiga e maligna. Na tentativa de proteger Atl‚ntida e o resto do mundo, Aquaman deve forjar uma alianÁa incÙmoda com um aliado improv·vel e deixar as diferenÁas de lado para evitar uma devastaÁ„o irreversÌvel.",
+                            "description": "Aquaman 2 √© a sequ√™ncia do filme Aquaman de 2018, que acompanha Arthur Curry (Jason Momoa), o filho do humano Tom Curry (Temuera Morrison) com a atlante Atlanna (Nicole Kidman). Ele cresce com a viv√™ncia de um humano e as capacidades metahumanas de um atlante. Nesta sequ√™ncia, depois de n√£o conseguir derrotar o rei dos mares pela primeira vez, Arraia Negra (Yahya Abdul-Mateen II) utiliza o poder do m√≠tico Tridente Negro para liberar uma for√ßa antiga e maligna. Na tentativa de proteger Atl√¢ntida e o resto do mundo, Aquaman deve forjar uma alian√ßa inc√¥moda com um aliado improv√°vel e deixar as diferen√ßas de lado para evitar uma devasta√ß√£o irrevers√≠vel.",
                             "director": "James Wan"
                         },
                         {
                             "id": 12,
                             "name": "Malcolm X",
                             "releasedYear": "1993",
-                            "description": "Biografia do famoso lÌder afro-americano (Denzel Washington) que teve o pai, um pastor, assassinado pela Klu Klux Klan e sua m„e internada por insanidade. Ele foi um malandro de rua e enquanto esteve preso descobriu o islamismo. Malcolm faz sua convers„o religiosa como um discÌpulo messi‚nico de Elijah Mohammed (Al Freeman Jr.). Ele se torna um fervoroso orador do movimento e se casa com Betty Shabazz (Angela Bassett). Malcolm X ora uma doutrina de Ûdio contra o homem branco atÈ que, anos mais tarde, quando fez uma peregrinaÁ„o ‡ Meca abranda suas convicÁıes. Foi nesta Època que se converteu ao original islamismo e se tornou um Sunni Muslim, mudando o nome para El-Hajj Malik Al-Shabazz, mas o esforÁo de quebrar o rÌgido dogma da NaÁ„o Isl„ teve tr·gicos resultados.",
+                            "description": "Biografia do famoso l√≠der afro-americano (Denzel Washington) que teve o pai, um pastor, assassinado pela Klu Klux Klan e sua m√£e internada por insanidade. Ele foi um malandro de rua e enquanto esteve preso descobriu o islamismo. Malcolm faz sua convers√£o religiosa como um disc√≠pulo messi√¢nico de Elijah Mohammed (Al Freeman Jr.). Ele se torna um fervoroso orador do movimento e se casa com Betty Shabazz (Angela Bassett). Malcolm X ora uma doutrina de √≥dio contra o homem branco at√© que, anos mais tarde, quando fez uma peregrina√ß√£o √† Meca abranda suas convic√ß√µes. Foi nesta √©poca que se converteu ao original islamismo e se tornou um Sunni Muslim, mudando o nome para El-Hajj Malik Al-Shabazz, mas o esfor√ßo de quebrar o r√≠gido dogma da Na√ß√£o Isl√£ teve tr√°gicos resultados.",
                             "director": "Spike Lee"
                         }
                     ]
@@ -422,34 +433,34 @@ query {
                             "id": 2,
                             "name": "O Mal que nos Habita",
                             "releasedYear": "2024",
-                            "description": "O Mal Que nos Habita È um filme argentino de terror dirigido por Demi·n Rugna (Aterrorizados, The Last Gateway). A trama se passa em uma pacata cidade do interior, onde dois irm„os encontram um corpo mutilado perto de sua propriedade e se re˙nem com os moradores locais para investigarem o ocorrido. Eles acabam descobrindo que o homem encontrado est· infectado pelo diabo e est· prestes a dar a luz a um demÙnio real. Desesperados, os habitantes tentam escapar do local antes que o ser maligno venha ‡ terra, mas o tempo parece n„o estar a seu favor e o caos È instaurado por completo.",
-                            "director": "Demi·n Rugna"
+                            "description": "O Mal Que nos Habita √© um filme argentino de terror dirigido por Demi√°n Rugna (Aterrorizados, The Last Gateway). A trama se passa em uma pacata cidade do interior, onde dois irm√£os encontram um corpo mutilado perto de sua propriedade e se re√∫nem com os moradores locais para investigarem o ocorrido. Eles acabam descobrindo que o homem encontrado est√° infectado pelo diabo e est√° prestes a dar a luz a um dem√¥nio real. Desesperados, os habitantes tentam escapar do local antes que o ser maligno venha √† terra, mas o tempo parece n√£o estar a seu favor e o caos √© instaurado por completo.",
+                            "director": "Demi√°n Rugna"
                         }
                     ]
                 },
                 {
                     "id": 3,
-                    "name": "ComÈdia/ComÈdia Infantil",
+                    "name": "Com√©dia/Com√©dia Infantil",
                     "movies": [
                         {
                             "id": 4,
-                            "name": "Turma da MÙnica Jovem: Reflexos do Medo",
+                            "name": "Turma da M√¥nica Jovem: Reflexos do Medo",
                             "releasedYear": "2024",
-                            "description": "Baseado nos quadrinhos cl·ssicos de MaurÌcio de Sousa, Turma da MÙnica Jovem: Reflexos do Medo traz os amigos em uma nova aventura, agora na adolescÍncia. Em uma nova escola e agora no ensino mÈdio, o primeiro dia de aula j· reservava uma surpresa: os amigos MÙnica (Sophia Valverde), Cebola (Xande Valois), Magali (Bianca Paiva), Casc„o (Theo Salom„o) e Milena (Carol Roberto) descobrem que o Museu do Limoeiro ser· leiloado. A turma decide se unir em uma miss„o para tentar salv·-lo, e enquanto investigam o que est· acontecendo, eles n„o demoram muito para perceber que podem estar lidando com uma ameaÁa muito maior do que imaginam. Marcando uma nova fase na vida dos amigos que est„o juntos desde a inf‚ncia, agora eles compartilham os medos e as inseguranÁas que surgem na adolescÍncia em uma trama que mistura aventura e suspense, mas sem perder o jeitinho de sempre.",
-                            "director": "Mauricio EÁa"
+                            "description": "Baseado nos quadrinhos cl√°ssicos de Maur√≠cio de Sousa, Turma da M√¥nica Jovem: Reflexos do Medo traz os amigos em uma nova aventura, agora na adolesc√™ncia. Em uma nova escola e agora no ensino m√©dio, o primeiro dia de aula j√° reservava uma surpresa: os amigos M√¥nica (Sophia Valverde), Cebola (Xande Valois), Magali (Bianca Paiva), Casc√£o (Theo Salom√£o) e Milena (Carol Roberto) descobrem que o Museu do Limoeiro ser√° leiloado. A turma decide se unir em uma miss√£o para tentar salv√°-lo, e enquanto investigam o que est√° acontecendo, eles n√£o demoram muito para perceber que podem estar lidando com uma amea√ßa muito maior do que imaginam. Marcando uma nova fase na vida dos amigos que est√£o juntos desde a inf√¢ncia, agora eles compartilham os medos e as inseguran√ßas que surgem na adolesc√™ncia em uma trama que mistura aventura e suspense, mas sem perder o jeitinho de sempre.",
+                            "director": "Mauricio E√ßa"
                         },
                         {
                             "id": 5,
                             "name": "Deadpool",
                             "releasedYear": "2016",
-                            "description": "Ex-militar e mercen·rio, Wade Wilson (Ryan Reynolds) È diagnosticado com c‚ncer em estado terminal, porÈm encontra uma possibilidade de cura em uma sinistra experiÍncia cientÌfica. Recuperado, com poderes e um incomum senso de humor, ele torna-se Deadpool e busca vinganÁa contra o homem que destruiu sua vida.",
+                            "description": "Ex-militar e mercen√°rio, Wade Wilson (Ryan Reynolds) √© diagnosticado com c√¢ncer em estado terminal, por√©m encontra uma possibilidade de cura em uma sinistra experi√™ncia cient√≠fica. Recuperado, com poderes e um incomum senso de humor, ele torna-se Deadpool e busca vingan√ßa contra o homem que destruiu sua vida.",
                             "director": "Tim Miller"
                         },
                         {
                             "id": 6,
                             "name": "Mamonas Assassinas - O Filme",
                             "releasedYear": "2023",
-                            "description": "Mamonas Assassinas - O Filme acompanha a trajetÛria de Dinho (Ruy Brissac), J˙lio (Robson Lima), Bento (Alberto Hinoto), SÈrgio (Rhener Freitas) e Samuel (Adriano Tunes) que, juntos, formaram um dos grupos mais inesperados e inicialmente desacreditados pelo grande p˙blico, os Mamonas Assassinas. Provando-se um sucesso estrondoso em um curtÌssimo espaÁo de tempo, o quinteto precisou de muitas tentativas frustradas para conseguir mostrar que podia ser a prÛxima grande banda do Brasil.",
+                            "description": "Mamonas Assassinas - O Filme acompanha a trajet√≥ria de Dinho (Ruy Brissac), J√∫lio (Robson Lima), Bento (Alberto Hinoto), S√©rgio (Rhener Freitas) e Samuel (Adriano Tunes) que, juntos, formaram um dos grupos mais inesperados e inicialmente desacreditados pelo grande p√∫blico, os Mamonas Assassinas. Provando-se um sucesso estrondoso em um curt√≠ssimo espa√ßo de tempo, o quinteto precisou de muitas tentativas frustradas para conseguir mostrar que podia ser a pr√≥xima grande banda do Brasil.",
                             "director": "Edson Spinello"
                         }
                     ]
@@ -462,7 +473,7 @@ query {
                             "id": 7,
                             "name": "Wonka",
                             "releasedYear": "2023",
-                            "description": "Wonka È uma comÈdia musical baseada no cl·ssico livro A Fant·stica F·brica de Chocolate, do autor brit‚nico Roald Dahl. O filme mostra as origens da histÛria do jovem Willy Wonka (interpretado por TimothÈe Chalamet), que apareceu nos cinemas pela primeira vez na produÁ„o de 1971 e, mais tarde, ganhou um remake estrelado por Johnny Depp em 2005. Antes de se tornar a mente brilhante por tr·s da maior f·brica de chocolate do mundo, Willy precisou enfrentar v·rios obst·culos. Cheio de ideias e determinado a mudar o mundo, o jovem Wonka embarca em uma aventura para espalhar alegria atravÈs de seu delecioso chocolate. Nela, ele acabou conhecendo o seu fiel e icÙnico assistente, Oompa Loompa (interpretado por Hugh Grant), que o ajudar a ir contra todas as probabilidades para se tornar o maior chocolatier j· visto. Mostrando que as melhores coisas da vida comeÁam com um sonho, o filme mistura magia, m˙sica, caos, afeiÁ„o e muito humor.",
+                            "description": "Wonka √© uma com√©dia musical baseada no cl√°ssico livro A Fant√°stica F√°brica de Chocolate, do autor brit√¢nico Roald Dahl. O filme mostra as origens da hist√≥ria do jovem Willy Wonka (interpretado por Timoth√©e Chalamet), que apareceu nos cinemas pela primeira vez na produ√ß√£o de 1971 e, mais tarde, ganhou um remake estrelado por Johnny Depp em 2005. Antes de se tornar a mente brilhante por tr√°s da maior f√°brica de chocolate do mundo, Willy precisou enfrentar v√°rios obst√°culos. Cheio de ideias e determinado a mudar o mundo, o jovem Wonka embarca em uma aventura para espalhar alegria atrav√©s de seu delecioso chocolate. Nela, ele acabou conhecendo o seu fiel e ic√¥nico assistente, Oompa Loompa (interpretado por Hugh Grant), que o ajudar a ir contra todas as probabilidades para se tornar o maior chocolatier j√° visto. Mostrando que as melhores coisas da vida come√ßam com um sonho, o filme mistura magia, m√∫sica, caos, afei√ß√£o e muito humor.",
                             "director": "Paul King"
                         }
                     ]
@@ -475,7 +486,7 @@ query {
                             "id": 8,
                             "name": "Oppenheimer",
                             "releasedYear": "2023",
-                            "description": "Oppenheimer È um filme histÛrico de drama dirigido por Christopher Nolan e baseado no livro biogr·fico vencedor do PrÍmio Pulitzer, Prometeu Americano: O Triunfo e a TragÈdia de J. Robert Oppenheimer, escrito por Kai Bird e Martin J. Sherwin. Ambientado na Segunda Guerra Mundial, o longa acompanha a vida de J. Robert Oppenheimer (Cillian Murphy), fÌsico teÛrico da Universidade da CalifÛrnia e diretor do LaboratÛrio de Los Alamos durante o Projeto Manhattan - que tinha a miss„o de projetar e construir as primeiras bombas atÙmicas. A trama acompanha o fÌsico e um grupo formado por outros cientistas ao longo do processo de desenvolvimento da arma nuclear que foi respons·vel pelas tragÈdias nas cidades de Hiroshima e Nagasaki, no Jap„o, em 1945. AlÈm de Cillian, o elenco tambÈm traz nomes como Emily Blunt, Matt Damon, Robert Downey Jr., Florence Pugh, Gary Oldman, Jack Quaid, Gustaf SkarsgÂrd, Rami Malek e Kenneth Branagh.",
+                            "description": "Oppenheimer √© um filme hist√≥rico de drama dirigido por Christopher Nolan e baseado no livro biogr√°fico vencedor do Pr√™mio Pulitzer, Prometeu Americano: O Triunfo e a Trag√©dia de J. Robert Oppenheimer, escrito por Kai Bird e Martin J. Sherwin. Ambientado na Segunda Guerra Mundial, o longa acompanha a vida de J. Robert Oppenheimer (Cillian Murphy), f√≠sico te√≥rico da Universidade da Calif√≥rnia e diretor do Laborat√≥rio de Los Alamos durante o Projeto Manhattan - que tinha a miss√£o de projetar e construir as primeiras bombas at√¥micas. A trama acompanha o f√≠sico e um grupo formado por outros cientistas ao longo do processo de desenvolvimento da arma nuclear que foi respons√°vel pelas trag√©dias nas cidades de Hiroshima e Nagasaki, no Jap√£o, em 1945. Al√©m de Cillian, o elenco tamb√©m traz nomes como Emily Blunt, Matt Damon, Robert Downey Jr., Florence Pugh, Gary Oldman, Jack Quaid, Gustaf Skarsg√•rd, Rami Malek e Kenneth Branagh.",
                             "director": "Christopher Nolan"
                         }
                     ]
@@ -486,9 +497,9 @@ query {
                     "movies": [
                         {
                             "id": 9,
-                            "name": "O Poderoso Chef„o",
+                            "name": "O Poderoso Chef√£o",
                             "releasedYear": "1972",
-                            "description": "Don Vito Corleone (Marlon Brando) È o chefe de uma famÌlia de Nova York que est· feliz, pois Connie (Talia Shire), sua filha, se casou com Carlo (Gianni Russo). PorÈm, durante a festa, Bonasera (Salvatore Corsitto) È visto no escritÛrio de Don Corleone pedindo justiÁa, vinganÁa na verdade contra membros de uma quadrilha, que espancaram barbaramente sua filha por ela ter se recusado a fazer sexo para preservar a honra. Vito discute, mas os argumentos de Bonasera o sensibilizam e ele promete que os homens, que maltrataram a filha de Bonasera n„o ser„o mortos, pois ela tambÈm n„o foi, mas ser„o severamente castigados. Vito porÈm deixa claro que ele pode chamar Bonasera algum dia para devolver o favor. Do lado de fora, no meio da festa, est· o terceiro filho de Vito, Michael (Al Pacino), um capit„o da marinha muito decorado que h· pouco voltou da 2™ Guerra Mundial. Universit·rio educado, sensÌvel e perceptivo, ele quase n„o È notado pela maioria dos presentes, com exceÁ„o de uma namorada da faculdade, Kay Adams (Diane Keaton), que n„o tem descendÍncia italiana mas que ele ama. Em contrapartida h· alguÈm que È bem notado, Johnny Fontane (Al Martino), um cantor de baladas rom‚nticas que provoca gritos entre as jovens que beiram a histeria. Don Corleone j· o tinha ajudado, quando Johnny ainda estava em comeÁo de carreira e estava preso por um contrato com o lÌder de uma grande banda, mas a carreira de Johnny deslanchou e ele queria fazer uma carreira solo. Por ser seu padrinho Vito foi procurar o lÌder da banda e ofereceu 10 mil dÛlares para deixar Johnny sair, mas teve o pedido recusado. Assim, no dia seguinte Vito voltou acompanhado por Luca Brasi (Lenny Montana), um capanga, e apÛs uma hora ele assinou a liberaÁ„o por apenas mil dÛlares, mas havia um detalhe: nas negociaÁıes Luca colocou uma arma na cabeÁa do lÌder da banda. Agora, no meio da alegria da festa, Johnny quer falar algo sÈrio com Vito, pois precisa conseguir o principal papel em um filme para levantar sua carreira, mas o chefe do est˙dio, Jack Woltz (John Marley), nem pensa em contrat·-lo. Nervoso, Johnny comeÁa a chorar e Vito, irritado, o esbofeteia, mas promete que ele conseguir· o almejado papel. Enquanto a festa continua acontecendo, Don Corleone comunica a Tom Hagen (Robert Duvall), seu filho adotivo que atua como conselheiro, que Carlo ter· um emprego mas nada muito importante, e que os negÛcios n„o devem ser discutidos na sua frente. Os verdadeiros problemas comeÁam para Vito quando Sollozzo (Al Lettieri), um g‚ngster que tem apoio de uma famÌlia rival, encabeÁada por Phillip Tattaglia (Victor Rendina) e seu filho Bruno (Tony Giorgio). Sollozzo, em uma reuni„o com Vito, Sonny e outros, conta para a famÌlia que ele pretende estabelecer um grande esquema de vendas de narcÛticos em Nova York, mas exige permiss„o e proteÁ„o polÌtica de Vito para agir. Don Corleone odeia esta idÈia, pois est· satisfeito em operar com jogo, mulheres e proteÁ„o, mas isto ser· apenas a ponta do iceberg de uma mortal luta entre as famÌlias",
+                            "description": "Don Vito Corleone (Marlon Brando) √© o chefe de uma fam√≠lia de Nova York que est√° feliz, pois Connie (Talia Shire), sua filha, se casou com Carlo (Gianni Russo). Por√©m, durante a festa, Bonasera (Salvatore Corsitto) √© visto no escrit√≥rio de Don Corleone pedindo justi√ßa, vingan√ßa na verdade contra membros de uma quadrilha, que espancaram barbaramente sua filha por ela ter se recusado a fazer sexo para preservar a honra. Vito discute, mas os argumentos de Bonasera o sensibilizam e ele promete que os homens, que maltrataram a filha de Bonasera n√£o ser√£o mortos, pois ela tamb√©m n√£o foi, mas ser√£o severamente castigados. Vito por√©m deixa claro que ele pode chamar Bonasera algum dia para devolver o favor. Do lado de fora, no meio da festa, est√° o terceiro filho de Vito, Michael (Al Pacino), um capit√£o da marinha muito decorado que h√° pouco voltou da 2¬™ Guerra Mundial. Universit√°rio educado, sens√≠vel e perceptivo, ele quase n√£o √© notado pela maioria dos presentes, com exce√ß√£o de uma namorada da faculdade, Kay Adams (Diane Keaton), que n√£o tem descend√™ncia italiana mas que ele ama. Em contrapartida h√° algu√©m que √© bem notado, Johnny Fontane (Al Martino), um cantor de baladas rom√¢nticas que provoca gritos entre as jovens que beiram a histeria. Don Corleone j√° o tinha ajudado, quando Johnny ainda estava em come√ßo de carreira e estava preso por um contrato com o l√≠der de uma grande banda, mas a carreira de Johnny deslanchou e ele queria fazer uma carreira solo. Por ser seu padrinho Vito foi procurar o l√≠der da banda e ofereceu 10 mil d√≥lares para deixar Johnny sair, mas teve o pedido recusado. Assim, no dia seguinte Vito voltou acompanhado por Luca Brasi (Lenny Montana), um capanga, e ap√≥s uma hora ele assinou a libera√ß√£o por apenas mil d√≥lares, mas havia um detalhe: nas negocia√ß√µes Luca colocou uma arma na cabe√ßa do l√≠der da banda. Agora, no meio da alegria da festa, Johnny quer falar algo s√©rio com Vito, pois precisa conseguir o principal papel em um filme para levantar sua carreira, mas o chefe do est√∫dio, Jack Woltz (John Marley), nem pensa em contrat√°-lo. Nervoso, Johnny come√ßa a chorar e Vito, irritado, o esbofeteia, mas promete que ele conseguir√° o almejado papel. Enquanto a festa continua acontecendo, Don Corleone comunica a Tom Hagen (Robert Duvall), seu filho adotivo que atua como conselheiro, que Carlo ter√° um emprego mas nada muito importante, e que os neg√≥cios n√£o devem ser discutidos na sua frente. Os verdadeiros problemas come√ßam para Vito quando Sollozzo (Al Lettieri), um g√¢ngster que tem apoio de uma fam√≠lia rival, encabe√ßada por Phillip Tattaglia (Victor Rendina) e seu filho Bruno (Tony Giorgio). Sollozzo, em uma reuni√£o com Vito, Sonny e outros, conta para a fam√≠lia que ele pretende estabelecer um grande esquema de vendas de narc√≥ticos em Nova York, mas exige permiss√£o e prote√ß√£o pol√≠tica de Vito para agir. Don Corleone odeia esta id√©ia, pois est√° satisfeito em operar com jogo, mulheres e prote√ß√£o, mas isto ser√° apenas a ponta do iceberg de uma mortal luta entre as fam√≠lias",
                             "director": "Francis Ford Coppola"
                         }
                     ]
@@ -501,20 +512,20 @@ query {
                             "id": 10,
                             "name": "Cinquenta Tons de Cinza",
                             "releasedYear": "2015",
-                            "description": "Em Cinquenta Tons de Cinza, Dakota Johnson vive Anastasia Steele, uma estudante de literatura de 21 anos, rom‚ntica e virgem. Um dia, ela precisa entrevistar para o jornal da faculdade o jovem bilion·rio Christian Grey (Jamie Dornan). Nasce, ent„o, uma complexa relaÁ„o entre ambos: com a descoberta amorosa e sexual, Anastasia conhece os prazeres do sadomasoquismo, tornando-se o objeto de submiss„o do s·dico Grey.",
+                            "description": "Em Cinquenta Tons de Cinza, Dakota Johnson vive Anastasia Steele, uma estudante de literatura de 21 anos, rom√¢ntica e virgem. Um dia, ela precisa entrevistar para o jornal da faculdade o jovem bilion√°rio Christian Grey (Jamie Dornan). Nasce, ent√£o, uma complexa rela√ß√£o entre ambos: com a descoberta amorosa e sexual, Anastasia conhece os prazeres do sadomasoquismo, tornando-se o objeto de submiss√£o do s√°dico Grey.",
                             "director": "Sam Taylor-Johnson"
                         }
                     ]
                 },
                 {
                     "id": 8,
-                    "name": "FicÁ„o",
+                    "name": "Fic√ß√£o",
                     "movies": [
                         {
                             "id": 13,
                             "name": "Interestelar",
                             "releasedYear": "2014",
-                            "description": "ApÛs ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss„o de verificar possÌveis planetas para receberem a populaÁ„o mundial, possibilitando a continuaÁ„o da espÈcie. Cooper (Matthew McConaughey) È chamado para liderar o grupo e aceita a miss„o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir· em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir· numa prÛpria jornada para tambÈm tentar salvar a populaÁ„o do planeta.",
+                            "description": "Ap√≥s ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss√£o de verificar poss√≠veis planetas para receberem a popula√ß√£o mundial, possibilitando a continua√ß√£o da esp√©cie. Cooper (Matthew McConaughey) √© chamado para liderar o grupo e aceita a miss√£o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir√° em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir√° numa pr√≥pria jornada para tamb√©m tentar salvar a popula√ß√£o do planeta.",
                             "director": "Christopher Nolan"
                         }
                     ]
@@ -564,9 +575,9 @@ query {
             "movies": [
                 {
                     "id": 1,
-                    "name": "Velozes & Furiosos: Desafio em TÛquio.",
+                    "name": "Velozes & Furiosos: Desafio em T√≥quio.",
                     "releasedYear": "2006",
-                    "description": "O filme destaca a cultura automotiva japonesa e È conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
+                    "description": "O filme destaca a cultura automotiva japonesa e √© conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
                     "director": "Justin Lin",
                     "cast": "",
                     "rating": "16",
@@ -576,18 +587,18 @@ query {
                     "poster": "https://br.web.img2.acsta.net/pictures/210/383/21038387_20130909201408304.jpg",
                     "countryOfOrigin": "United States of America",
                     "language": "English",
-                    "keywords": "AÁ„o, Policial",
+                    "keywords": "A√ß√£o, Policial",
                     "category": {
                         "id": 1,
-                        "name": "AÁ„o"
+                        "name": "A√ß√£o"
                     }
                 },
                 {
                     "id": 2,
                     "name": "O Mal que nos Habita",
                     "releasedYear": "2024",
-                    "description": "O Mal Que nos Habita È um filme argentino de terror dirigido por Demi·n Rugna (Aterrorizados, The Last Gateway). A trama se passa em uma pacata cidade do interior, onde dois irm„os encontram um corpo mutilado perto de sua propriedade e se re˙nem com os moradores locais para investigarem o ocorrido. Eles acabam descobrindo que o homem encontrado est· infectado pelo diabo e est· prestes a dar a luz a um demÙnio real. Desesperados, os habitantes tentam escapar do local antes que o ser maligno venha ‡ terra, mas o tempo parece n„o estar a seu favor e o caos È instaurado por completo.",
-                    "director": "Demi·n Rugna",
+                    "description": "O Mal Que nos Habita √© um filme argentino de terror dirigido por Demi√°n Rugna (Aterrorizados, The Last Gateway). A trama se passa em uma pacata cidade do interior, onde dois irm√£os encontram um corpo mutilado perto de sua propriedade e se re√∫nem com os moradores locais para investigarem o ocorrido. Eles acabam descobrindo que o homem encontrado est√° infectado pelo diabo e est√° prestes a dar a luz a um dem√¥nio real. Desesperados, os habitantes tentam escapar do local antes que o ser maligno venha √† terra, mas o tempo parece n√£o estar a seu favor e o caos √© instaurado por completo.",
+                    "director": "Demi√°n Rugna",
                     "cast": "",
                     "rating": "16",
                     "review": "3.5",
@@ -606,7 +617,7 @@ query {
                     "id": 3,
                     "name": "Aquaman 2: O Reino Perdido",
                     "releasedYear": "2023",
-                    "description": "Aquaman 2 È a sequÍncia do filme Aquaman de 2018, que acompanha Arthur Curry (Jason Momoa), o filho do humano Tom Curry (Temuera Morrison) com a atlante Atlanna (Nicole Kidman). Ele cresce com a vivÍncia de um humano e as capacidades metahumanas de um atlante. Nesta sequÍncia, depois de n„o conseguir derrotar o rei dos mares pela primeira vez, Arraia Negra (Yahya Abdul-Mateen II) utiliza o poder do mÌtico Tridente Negro para liberar uma forÁa antiga e maligna. Na tentativa de proteger Atl‚ntida e o resto do mundo, Aquaman deve forjar uma alianÁa incÙmoda com um aliado improv·vel e deixar as diferenÁas de lado para evitar uma devastaÁ„o irreversÌvel.",
+                    "description": "Aquaman 2 √© a sequ√™ncia do filme Aquaman de 2018, que acompanha Arthur Curry (Jason Momoa), o filho do humano Tom Curry (Temuera Morrison) com a atlante Atlanna (Nicole Kidman). Ele cresce com a viv√™ncia de um humano e as capacidades metahumanas de um atlante. Nesta sequ√™ncia, depois de n√£o conseguir derrotar o rei dos mares pela primeira vez, Arraia Negra (Yahya Abdul-Mateen II) utiliza o poder do m√≠tico Tridente Negro para liberar uma for√ßa antiga e maligna. Na tentativa de proteger Atl√¢ntida e o resto do mundo, Aquaman deve forjar uma alian√ßa inc√¥moda com um aliado improv√°vel e deixar as diferen√ßas de lado para evitar uma devasta√ß√£o irrevers√≠vel.",
                     "director": "James Wan",
                     "cast": "",
                     "rating": "14",
@@ -619,15 +630,15 @@ query {
                     "keywords": "Action, Sea",
                     "category": {
                         "id": 1,
-                        "name": "AÁ„o"
+                        "name": "A√ß√£o"
                     }
                 },
                 {
                     "id": 4,
-                    "name": "Turma da MÙnica Jovem: Reflexos do Medo",
+                    "name": "Turma da M√¥nica Jovem: Reflexos do Medo",
                     "releasedYear": "2024",
-                    "description": "Baseado nos quadrinhos cl·ssicos de MaurÌcio de Sousa, Turma da MÙnica Jovem: Reflexos do Medo traz os amigos em uma nova aventura, agora na adolescÍncia. Em uma nova escola e agora no ensino mÈdio, o primeiro dia de aula j· reservava uma surpresa: os amigos MÙnica (Sophia Valverde), Cebola (Xande Valois), Magali (Bianca Paiva), Casc„o (Theo Salom„o) e Milena (Carol Roberto) descobrem que o Museu do Limoeiro ser· leiloado. A turma decide se unir em uma miss„o para tentar salv·-lo, e enquanto investigam o que est· acontecendo, eles n„o demoram muito para perceber que podem estar lidando com uma ameaÁa muito maior do que imaginam. Marcando uma nova fase na vida dos amigos que est„o juntos desde a inf‚ncia, agora eles compartilham os medos e as inseguranÁas que surgem na adolescÍncia em uma trama que mistura aventura e suspense, mas sem perder o jeitinho de sempre.",
-                    "director": "Mauricio EÁa",
+                    "description": "Baseado nos quadrinhos cl√°ssicos de Maur√≠cio de Sousa, Turma da M√¥nica Jovem: Reflexos do Medo traz os amigos em uma nova aventura, agora na adolesc√™ncia. Em uma nova escola e agora no ensino m√©dio, o primeiro dia de aula j√° reservava uma surpresa: os amigos M√¥nica (Sophia Valverde), Cebola (Xande Valois), Magali (Bianca Paiva), Casc√£o (Theo Salom√£o) e Milena (Carol Roberto) descobrem que o Museu do Limoeiro ser√° leiloado. A turma decide se unir em uma miss√£o para tentar salv√°-lo, e enquanto investigam o que est√° acontecendo, eles n√£o demoram muito para perceber que podem estar lidando com uma amea√ßa muito maior do que imaginam. Marcando uma nova fase na vida dos amigos que est√£o juntos desde a inf√¢ncia, agora eles compartilham os medos e as inseguran√ßas que surgem na adolesc√™ncia em uma trama que mistura aventura e suspense, mas sem perder o jeitinho de sempre.",
+                    "director": "Mauricio E√ßa",
                     "cast": "",
                     "rating": "10",
                     "review": "2.6",
@@ -639,14 +650,14 @@ query {
                     "keywords": "Comedia, Novel",
                     "category": {
                         "id": 3,
-                        "name": "ComÈdia Infantil"
+                        "name": "Com√©dia Infantil"
                     }
                 },
                 {
                     "id": 5,
                     "name": "Deadpool",
                     "releasedYear": "2016",
-                    "description": "Ex-militar e mercen·rio, Wade Wilson (Ryan Reynolds) È diagnosticado com c‚ncer em estado terminal, porÈm encontra uma possibilidade de cura em uma sinistra experiÍncia cientÌfica. Recuperado, com poderes e um incomum senso de humor, ele torna-se Deadpool e busca vinganÁa contra o homem que destruiu sua vida.",
+                    "description": "Ex-militar e mercen√°rio, Wade Wilson (Ryan Reynolds) √© diagnosticado com c√¢ncer em estado terminal, por√©m encontra uma possibilidade de cura em uma sinistra experi√™ncia cient√≠fica. Recuperado, com poderes e um incomum senso de humor, ele torna-se Deadpool e busca vingan√ßa contra o homem que destruiu sua vida.",
                     "director": "Tim Miller",
                     "cast": "",
                     "rating": "16",
@@ -659,14 +670,14 @@ query {
                     "keywords": "Action, Adventures",
                     "category": {
                         "id": 3,
-                        "name": "ComÈdia Infantil"
+                        "name": "Com√©dia Infantil"
                     }
                 },
                 {
                     "id": 6,
                     "name": "Mamonas Assassinas - O Filme",
                     "releasedYear": "2023",
-                    "description": "Mamonas Assassinas - O Filme acompanha a trajetÛria de Dinho (Ruy Brissac), J˙lio (Robson Lima), Bento (Alberto Hinoto), SÈrgio (Rhener Freitas) e Samuel (Adriano Tunes) que, juntos, formaram um dos grupos mais inesperados e inicialmente desacreditados pelo grande p˙blico, os Mamonas Assassinas. Provando-se um sucesso estrondoso em um curtÌssimo espaÁo de tempo, o quinteto precisou de muitas tentativas frustradas para conseguir mostrar que podia ser a prÛxima grande banda do Brasil.",
+                    "description": "Mamonas Assassinas - O Filme acompanha a trajet√≥ria de Dinho (Ruy Brissac), J√∫lio (Robson Lima), Bento (Alberto Hinoto), S√©rgio (Rhener Freitas) e Samuel (Adriano Tunes) que, juntos, formaram um dos grupos mais inesperados e inicialmente desacreditados pelo grande p√∫blico, os Mamonas Assassinas. Provando-se um sucesso estrondoso em um curt√≠ssimo espa√ßo de tempo, o quinteto precisou de muitas tentativas frustradas para conseguir mostrar que podia ser a pr√≥xima grande banda do Brasil.",
                     "director": "Edson Spinello",
                     "cast": "",
                     "rating": "12",
@@ -679,14 +690,14 @@ query {
                     "keywords": "Comedia, Bibliografia",
                     "category": {
                         "id": 3,
-                        "name": "ComÈdia Infantil"
+                        "name": "Com√©dia Infantil"
                     }
                 },
                 {
                     "id": 7,
                     "name": "Wonka",
                     "releasedYear": "2023",
-                    "description": "Wonka È uma comÈdia musical baseada no cl·ssico livro A Fant·stica F·brica de Chocolate, do autor brit‚nico Roald Dahl. O filme mostra as origens da histÛria do jovem Willy Wonka (interpretado por TimothÈe Chalamet), que apareceu nos cinemas pela primeira vez na produÁ„o de 1971 e, mais tarde, ganhou um remake estrelado por Johnny Depp em 2005. Antes de se tornar a mente brilhante por tr·s da maior f·brica de chocolate do mundo, Willy precisou enfrentar v·rios obst·culos. Cheio de ideias e determinado a mudar o mundo, o jovem Wonka embarca em uma aventura para espalhar alegria atravÈs de seu delecioso chocolate. Nela, ele acabou conhecendo o seu fiel e icÙnico assistente, Oompa Loompa (interpretado por Hugh Grant), que o ajudar a ir contra todas as probabilidades para se tornar o maior chocolatier j· visto. Mostrando que as melhores coisas da vida comeÁam com um sonho, o filme mistura magia, m˙sica, caos, afeiÁ„o e muito humor.",
+                    "description": "Wonka √© uma com√©dia musical baseada no cl√°ssico livro A Fant√°stica F√°brica de Chocolate, do autor brit√¢nico Roald Dahl. O filme mostra as origens da hist√≥ria do jovem Willy Wonka (interpretado por Timoth√©e Chalamet), que apareceu nos cinemas pela primeira vez na produ√ß√£o de 1971 e, mais tarde, ganhou um remake estrelado por Johnny Depp em 2005. Antes de se tornar a mente brilhante por tr√°s da maior f√°brica de chocolate do mundo, Willy precisou enfrentar v√°rios obst√°culos. Cheio de ideias e determinado a mudar o mundo, o jovem Wonka embarca em uma aventura para espalhar alegria atrav√©s de seu delecioso chocolate. Nela, ele acabou conhecendo o seu fiel e ic√¥nico assistente, Oompa Loompa (interpretado por Hugh Grant), que o ajudar a ir contra todas as probabilidades para se tornar o maior chocolatier j√° visto. Mostrando que as melhores coisas da vida come√ßam com um sonho, o filme mistura magia, m√∫sica, caos, afei√ß√£o e muito humor.",
                     "director": "Paul King",
                     "cast": "",
                     "rating": "10",
@@ -706,7 +717,7 @@ query {
                     "id": 8,
                     "name": "Oppenheimer",
                     "releasedYear": "2023",
-                    "description": "Oppenheimer È um filme histÛrico de drama dirigido por Christopher Nolan e baseado no livro biogr·fico vencedor do PrÍmio Pulitzer, Prometeu Americano: O Triunfo e a TragÈdia de J. Robert Oppenheimer, escrito por Kai Bird e Martin J. Sherwin. Ambientado na Segunda Guerra Mundial, o longa acompanha a vida de J. Robert Oppenheimer (Cillian Murphy), fÌsico teÛrico da Universidade da CalifÛrnia e diretor do LaboratÛrio de Los Alamos durante o Projeto Manhattan - que tinha a miss„o de projetar e construir as primeiras bombas atÙmicas. A trama acompanha o fÌsico e um grupo formado por outros cientistas ao longo do processo de desenvolvimento da arma nuclear que foi respons·vel pelas tragÈdias nas cidades de Hiroshima e Nagasaki, no Jap„o, em 1945. AlÈm de Cillian, o elenco tambÈm traz nomes como Emily Blunt, Matt Damon, Robert Downey Jr., Florence Pugh, Gary Oldman, Jack Quaid, Gustaf SkarsgÂrd, Rami Malek e Kenneth Branagh.",
+                    "description": "Oppenheimer √© um filme hist√≥rico de drama dirigido por Christopher Nolan e baseado no livro biogr√°fico vencedor do Pr√™mio Pulitzer, Prometeu Americano: O Triunfo e a Trag√©dia de J. Robert Oppenheimer, escrito por Kai Bird e Martin J. Sherwin. Ambientado na Segunda Guerra Mundial, o longa acompanha a vida de J. Robert Oppenheimer (Cillian Murphy), f√≠sico te√≥rico da Universidade da Calif√≥rnia e diretor do Laborat√≥rio de Los Alamos durante o Projeto Manhattan - que tinha a miss√£o de projetar e construir as primeiras bombas at√¥micas. A trama acompanha o f√≠sico e um grupo formado por outros cientistas ao longo do processo de desenvolvimento da arma nuclear que foi respons√°vel pelas trag√©dias nas cidades de Hiroshima e Nagasaki, no Jap√£o, em 1945. Al√©m de Cillian, o elenco tamb√©m traz nomes como Emily Blunt, Matt Damon, Robert Downey Jr., Florence Pugh, Gary Oldman, Jack Quaid, Gustaf Skarsg√•rd, Rami Malek e Kenneth Branagh.",
                     "director": "Christopher Nolan",
                     "cast": "",
                     "rating": "16",
@@ -716,7 +727,7 @@ query {
                     "poster": "https://br.web.img2.acsta.net/pictures/23/05/08/10/29/0695770.jpg",
                     "countryOfOrigin": "United States of America",
                     "language": "English",
-                    "keywords": "Biopic, HistÛrico, Suspense",
+                    "keywords": "Biopic, Hist√≥rico, Suspense",
                     "category": {
                         "id": 5,
                         "name": "Suspense"
@@ -724,9 +735,9 @@ query {
                 },
                 {
                     "id": 9,
-                    "name": "O Poderoso Chef„o",
+                    "name": "O Poderoso Chef√£o",
                     "releasedYear": "1972",
-                    "description": "Don Vito Corleone (Marlon Brando) È o chefe de uma famÌlia de Nova York que est· feliz, pois Connie (Talia Shire), sua filha, se casou com Carlo (Gianni Russo). PorÈm, durante a festa, Bonasera (Salvatore Corsitto) È visto no escritÛrio de Don Corleone pedindo justiÁa, vinganÁa na verdade contra membros de uma quadrilha, que espancaram barbaramente sua filha por ela ter se recusado a fazer sexo para preservar a honra. Vito discute, mas os argumentos de Bonasera o sensibilizam e ele promete que os homens, que maltrataram a filha de Bonasera n„o ser„o mortos, pois ela tambÈm n„o foi, mas ser„o severamente castigados. Vito porÈm deixa claro que ele pode chamar Bonasera algum dia para devolver o favor. Do lado de fora, no meio da festa, est· o terceiro filho de Vito, Michael (Al Pacino), um capit„o da marinha muito decorado que h· pouco voltou da 2™ Guerra Mundial. Universit·rio educado, sensÌvel e perceptivo, ele quase n„o È notado pela maioria dos presentes, com exceÁ„o de uma namorada da faculdade, Kay Adams (Diane Keaton), que n„o tem descendÍncia italiana mas que ele ama. Em contrapartida h· alguÈm que È bem notado, Johnny Fontane (Al Martino), um cantor de baladas rom‚nticas que provoca gritos entre as jovens que beiram a histeria. Don Corleone j· o tinha ajudado, quando Johnny ainda estava em comeÁo de carreira e estava preso por um contrato com o lÌder de uma grande banda, mas a carreira de Johnny deslanchou e ele queria fazer uma carreira solo. Por ser seu padrinho Vito foi procurar o lÌder da banda e ofereceu 10 mil dÛlares para deixar Johnny sair, mas teve o pedido recusado. Assim, no dia seguinte Vito voltou acompanhado por Luca Brasi (Lenny Montana), um capanga, e apÛs uma hora ele assinou a liberaÁ„o por apenas mil dÛlares, mas havia um detalhe: nas negociaÁıes Luca colocou uma arma na cabeÁa do lÌder da banda. Agora, no meio da alegria da festa, Johnny quer falar algo sÈrio com Vito, pois precisa conseguir o principal papel em um filme para levantar sua carreira, mas o chefe do est˙dio, Jack Woltz (John Marley), nem pensa em contrat·-lo. Nervoso, Johnny comeÁa a chorar e Vito, irritado, o esbofeteia, mas promete que ele conseguir· o almejado papel. Enquanto a festa continua acontecendo, Don Corleone comunica a Tom Hagen (Robert Duvall), seu filho adotivo que atua como conselheiro, que Carlo ter· um emprego mas nada muito importante, e que os negÛcios n„o devem ser discutidos na sua frente. Os verdadeiros problemas comeÁam para Vito quando Sollozzo (Al Lettieri), um g‚ngster que tem apoio de uma famÌlia rival, encabeÁada por Phillip Tattaglia (Victor Rendina) e seu filho Bruno (Tony Giorgio). Sollozzo, em uma reuni„o com Vito, Sonny e outros, conta para a famÌlia que ele pretende estabelecer um grande esquema de vendas de narcÛticos em Nova York, mas exige permiss„o e proteÁ„o polÌtica de Vito para agir. Don Corleone odeia esta idÈia, pois est· satisfeito em operar com jogo, mulheres e proteÁ„o, mas isto ser· apenas a ponta do iceberg de uma mortal luta entre as famÌlias",
+                    "description": "Don Vito Corleone (Marlon Brando) √© o chefe de uma fam√≠lia de Nova York que est√° feliz, pois Connie (Talia Shire), sua filha, se casou com Carlo (Gianni Russo). Por√©m, durante a festa, Bonasera (Salvatore Corsitto) √© visto no escrit√≥rio de Don Corleone pedindo justi√ßa, vingan√ßa na verdade contra membros de uma quadrilha, que espancaram barbaramente sua filha por ela ter se recusado a fazer sexo para preservar a honra. Vito discute, mas os argumentos de Bonasera o sensibilizam e ele promete que os homens, que maltrataram a filha de Bonasera n√£o ser√£o mortos, pois ela tamb√©m n√£o foi, mas ser√£o severamente castigados. Vito por√©m deixa claro que ele pode chamar Bonasera algum dia para devolver o favor. Do lado de fora, no meio da festa, est√° o terceiro filho de Vito, Michael (Al Pacino), um capit√£o da marinha muito decorado que h√° pouco voltou da 2¬™ Guerra Mundial. Universit√°rio educado, sens√≠vel e perceptivo, ele quase n√£o √© notado pela maioria dos presentes, com exce√ß√£o de uma namorada da faculdade, Kay Adams (Diane Keaton), que n√£o tem descend√™ncia italiana mas que ele ama. Em contrapartida h√° algu√©m que √© bem notado, Johnny Fontane (Al Martino), um cantor de baladas rom√¢nticas que provoca gritos entre as jovens que beiram a histeria. Don Corleone j√° o tinha ajudado, quando Johnny ainda estava em come√ßo de carreira e estava preso por um contrato com o l√≠der de uma grande banda, mas a carreira de Johnny deslanchou e ele queria fazer uma carreira solo. Por ser seu padrinho Vito foi procurar o l√≠der da banda e ofereceu 10 mil d√≥lares para deixar Johnny sair, mas teve o pedido recusado. Assim, no dia seguinte Vito voltou acompanhado por Luca Brasi (Lenny Montana), um capanga, e ap√≥s uma hora ele assinou a libera√ß√£o por apenas mil d√≥lares, mas havia um detalhe: nas negocia√ß√µes Luca colocou uma arma na cabe√ßa do l√≠der da banda. Agora, no meio da alegria da festa, Johnny quer falar algo s√©rio com Vito, pois precisa conseguir o principal papel em um filme para levantar sua carreira, mas o chefe do est√∫dio, Jack Woltz (John Marley), nem pensa em contrat√°-lo. Nervoso, Johnny come√ßa a chorar e Vito, irritado, o esbofeteia, mas promete que ele conseguir√° o almejado papel. Enquanto a festa continua acontecendo, Don Corleone comunica a Tom Hagen (Robert Duvall), seu filho adotivo que atua como conselheiro, que Carlo ter√° um emprego mas nada muito importante, e que os neg√≥cios n√£o devem ser discutidos na sua frente. Os verdadeiros problemas come√ßam para Vito quando Sollozzo (Al Lettieri), um g√¢ngster que tem apoio de uma fam√≠lia rival, encabe√ßada por Phillip Tattaglia (Victor Rendina) e seu filho Bruno (Tony Giorgio). Sollozzo, em uma reuni√£o com Vito, Sonny e outros, conta para a fam√≠lia que ele pretende estabelecer um grande esquema de vendas de narc√≥ticos em Nova York, mas exige permiss√£o e prote√ß√£o pol√≠tica de Vito para agir. Don Corleone odeia esta id√©ia, pois est√° satisfeito em operar com jogo, mulheres e prote√ß√£o, mas isto ser√° apenas a ponta do iceberg de uma mortal luta entre as fam√≠lias",
                     "director": "Francis Ford Coppola",
                     "cast": "",
                     "rating": "16",
@@ -736,7 +747,7 @@ query {
                     "poster": "https://br.web.img3.acsta.net/medias/nmedia/18/90/93/20/20120876.jpg",
                     "countryOfOrigin": "United States of America",
                     "language": "English",
-                    "keywords": "AÁ„o, Mafia",
+                    "keywords": "A√ß√£o, Mafia",
                     "category": {
                         "id": 6,
                         "name": "Policial"
@@ -746,7 +757,7 @@ query {
                     "id": 10,
                     "name": "Cinquenta Tons de Cinza",
                     "releasedYear": "2015",
-                    "description": "Em Cinquenta Tons de Cinza, Dakota Johnson vive Anastasia Steele, uma estudante de literatura de 21 anos, rom‚ntica e virgem. Um dia, ela precisa entrevistar para o jornal da faculdade o jovem bilion·rio Christian Grey (Jamie Dornan). Nasce, ent„o, uma complexa relaÁ„o entre ambos: com a descoberta amorosa e sexual, Anastasia conhece os prazeres do sadomasoquismo, tornando-se o objeto de submiss„o do s·dico Grey.",
+                    "description": "Em Cinquenta Tons de Cinza, Dakota Johnson vive Anastasia Steele, uma estudante de literatura de 21 anos, rom√¢ntica e virgem. Um dia, ela precisa entrevistar para o jornal da faculdade o jovem bilion√°rio Christian Grey (Jamie Dornan). Nasce, ent√£o, uma complexa rela√ß√£o entre ambos: com a descoberta amorosa e sexual, Anastasia conhece os prazeres do sadomasoquismo, tornando-se o objeto de submiss√£o do s√°dico Grey.",
                     "director": "Sam Taylor-Johnson",
                     "cast": "",
                     "rating": "18",
@@ -766,7 +777,7 @@ query {
                     "id": 12,
                     "name": "Malcolm X",
                     "releasedYear": "1993",
-                    "description": "Biografia do famoso lÌder afro-americano (Denzel Washington) que teve o pai, um pastor, assassinado pela Klu Klux Klan e sua m„e internada por insanidade. Ele foi um malandro de rua e enquanto esteve preso descobriu o islamismo. Malcolm faz sua convers„o religiosa como um discÌpulo messi‚nico de Elijah Mohammed (Al Freeman Jr.). Ele se torna um fervoroso orador do movimento e se casa com Betty Shabazz (Angela Bassett). Malcolm X ora uma doutrina de Ûdio contra o homem branco atÈ que, anos mais tarde, quando fez uma peregrinaÁ„o ‡ Meca abranda suas convicÁıes. Foi nesta Època que se converteu ao original islamismo e se tornou um Sunni Muslim, mudando o nome para El-Hajj Malik Al-Shabazz, mas o esforÁo de quebrar o rÌgido dogma da NaÁ„o Isl„ teve tr·gicos resultados.",
+                    "description": "Biografia do famoso l√≠der afro-americano (Denzel Washington) que teve o pai, um pastor, assassinado pela Klu Klux Klan e sua m√£e internada por insanidade. Ele foi um malandro de rua e enquanto esteve preso descobriu o islamismo. Malcolm faz sua convers√£o religiosa como um disc√≠pulo messi√¢nico de Elijah Mohammed (Al Freeman Jr.). Ele se torna um fervoroso orador do movimento e se casa com Betty Shabazz (Angela Bassett). Malcolm X ora uma doutrina de √≥dio contra o homem branco at√© que, anos mais tarde, quando fez uma peregrina√ß√£o √† Meca abranda suas convic√ß√µes. Foi nesta √©poca que se converteu ao original islamismo e se tornou um Sunni Muslim, mudando o nome para El-Hajj Malik Al-Shabazz, mas o esfor√ßo de quebrar o r√≠gido dogma da Na√ß√£o Isl√£ teve tr√°gicos resultados.",
                     "director": "Spike Lee",
                     "cast": "",
                     "rating": "14",
@@ -776,17 +787,17 @@ query {
                     "poster": "https://m.media-amazon.com/images/M/MV5BZDkzOTFmMTUtMmI2OS00MDE4LTg5YTUtODMwNDMzNmI5OGYwL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
                     "countryOfOrigin": "United States of America",
                     "language": "English",
-                    "keywords": "AÁ„o, Bibliogragia",
+                    "keywords": "A√ß√£o, Bibliogragia",
                     "category": {
                         "id": 1,
-                        "name": "AÁ„o"
+                        "name": "A√ß√£o"
                     }
                 },
                 {
                     "id": 13,
                     "name": "Interestelar",
                     "releasedYear": "2014",
-                    "description": "ApÛs ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss„o de verificar possÌveis planetas para receberem a populaÁ„o mundial, possibilitando a continuaÁ„o da espÈcie. Cooper (Matthew McConaughey) È chamado para liderar o grupo e aceita a miss„o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir· em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir· numa prÛpria jornada para tambÈm tentar salvar a populaÁ„o do planeta.",
+                    "description": "Ap√≥s ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss√£o de verificar poss√≠veis planetas para receberem a popula√ß√£o mundial, possibilitando a continua√ß√£o da esp√©cie. Cooper (Matthew McConaughey) √© chamado para liderar o grupo e aceita a miss√£o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir√° em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir√° numa pr√≥pria jornada para tamb√©m tentar salvar a popula√ß√£o do planeta.",
                     "director": "Christopher Nolan",
                     "cast": "Matthew McConaughey, Anne Hathaway, Michael Caine",
                     "rating": "14",
@@ -796,10 +807,10 @@ query {
                     "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQmyAQu2hcbYkaBGOpDuU17xTTGILMFl4m0VfdMXI-sQ&s",
                     "countryOfOrigin": "United States of America",
                     "language": "English",
-                    "keywords": "AÁ„o, Science, Fiction",
+                    "keywords": "A√ß√£o, Science, Fiction",
                     "category": {
                         "id": 8,
-                        "name": "FicÁ„o"
+                        "name": "Fic√ß√£o"
                     }
                 }
             ]
@@ -839,27 +850,27 @@ query {
         "categoryQuery": {
             "category": {
                 "id": 1,
-                "name": "AÁ„o",
+                "name": "A√ß√£o",
                 "movies": [
                     {
                         "id": 1,
-                        "name": "Velozes & Furiosos: Desafio em TÛquio.",
+                        "name": "Velozes & Furiosos: Desafio em T√≥quio.",
                         "releasedYear": "2006",
-                        "description": "O filme destaca a cultura automotiva japonesa e È conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
+                        "description": "O filme destaca a cultura automotiva japonesa e √© conhecido por suas cenas de corrida espetaculares e efeitos visuais impressionantes.",
                         "director": "Justin Lin"
                     },
                     {
                         "id": 3,
                         "name": "Aquaman 2: O Reino Perdido",
                         "releasedYear": "2023",
-                        "description": "Aquaman 2 È a sequÍncia do filme Aquaman de 2018, que acompanha Arthur Curry (Jason Momoa), o filho do humano Tom Curry (Temuera Morrison) com a atlante Atlanna (Nicole Kidman). Ele cresce com a vivÍncia de um humano e as capacidades metahumanas de um atlante. Nesta sequÍncia, depois de n„o conseguir derrotar o rei dos mares pela primeira vez, Arraia Negra (Yahya Abdul-Mateen II) utiliza o poder do mÌtico Tridente Negro para liberar uma forÁa antiga e maligna. Na tentativa de proteger Atl‚ntida e o resto do mundo, Aquaman deve forjar uma alianÁa incÙmoda com um aliado improv·vel e deixar as diferenÁas de lado para evitar uma devastaÁ„o irreversÌvel.",
+                        "description": "Aquaman 2 √© a sequ√™ncia do filme Aquaman de 2018, que acompanha Arthur Curry (Jason Momoa), o filho do humano Tom Curry (Temuera Morrison) com a atlante Atlanna (Nicole Kidman). Ele cresce com a viv√™ncia de um humano e as capacidades metahumanas de um atlante. Nesta sequ√™ncia, depois de n√£o conseguir derrotar o rei dos mares pela primeira vez, Arraia Negra (Yahya Abdul-Mateen II) utiliza o poder do m√≠tico Tridente Negro para liberar uma for√ßa antiga e maligna. Na tentativa de proteger Atl√¢ntida e o resto do mundo, Aquaman deve forjar uma alian√ßa inc√¥moda com um aliado improv√°vel e deixar as diferen√ßas de lado para evitar uma devasta√ß√£o irrevers√≠vel.",
                         "director": "James Wan"
                     },
                     {
                         "id": 12,
                         "name": "Malcolm X",
                         "releasedYear": "1993",
-                        "description": "Biografia do famoso lÌder afro-americano (Denzel Washington) que teve o pai, um pastor, assassinado pela Klu Klux Klan e sua m„e internada por insanidade. Ele foi um malandro de rua e enquanto esteve preso descobriu o islamismo. Malcolm faz sua convers„o religiosa como um discÌpulo messi‚nico de Elijah Mohammed (Al Freeman Jr.). Ele se torna um fervoroso orador do movimento e se casa com Betty Shabazz (Angela Bassett). Malcolm X ora uma doutrina de Ûdio contra o homem branco atÈ que, anos mais tarde, quando fez uma peregrinaÁ„o ‡ Meca abranda suas convicÁıes. Foi nesta Època que se converteu ao original islamismo e se tornou um Sunni Muslim, mudando o nome para El-Hajj Malik Al-Shabazz, mas o esforÁo de quebrar o rÌgido dogma da NaÁ„o Isl„ teve tr·gicos resultados.",
+                        "description": "Biografia do famoso l√≠der afro-americano (Denzel Washington) que teve o pai, um pastor, assassinado pela Klu Klux Klan e sua m√£e internada por insanidade. Ele foi um malandro de rua e enquanto esteve preso descobriu o islamismo. Malcolm faz sua convers√£o religiosa como um disc√≠pulo messi√¢nico de Elijah Mohammed (Al Freeman Jr.). Ele se torna um fervoroso orador do movimento e se casa com Betty Shabazz (Angela Bassett). Malcolm X ora uma doutrina de √≥dio contra o homem branco at√© que, anos mais tarde, quando fez uma peregrina√ß√£o √† Meca abranda suas convic√ß√µes. Foi nesta √©poca que se converteu ao original islamismo e se tornou um Sunni Muslim, mudando o nome para El-Hajj Malik Al-Shabazz, mas o esfor√ßo de quebrar o r√≠gido dogma da Na√ß√£o Isl√£ teve tr√°gicos resultados.",
                         "director": "Spike Lee"
                     }
                 ]
@@ -909,7 +920,7 @@ query {
                 "id": 13,
                 "name": "Interestelar",
                 "releasedYear": "2014",
-                "description": "ApÛs ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss„o de verificar possÌveis planetas para receberem a populaÁ„o mundial, possibilitando a continuaÁ„o da espÈcie. Cooper (Matthew McConaughey) È chamado para liderar o grupo e aceita a miss„o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir· em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir· numa prÛpria jornada para tambÈm tentar salvar a populaÁ„o do planeta.",
+                "description": "Ap√≥s ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a miss√£o de verificar poss√≠veis planetas para receberem a popula√ß√£o mundial, possibilitando a continua√ß√£o da esp√©cie. Cooper (Matthew McConaughey) √© chamado para liderar o grupo e aceita a miss√£o sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguir√° em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investir√° numa pr√≥pria jornada para tamb√©m tentar salvar a popula√ß√£o do planeta.",
                 "director": "Christopher Nolan",
                 "cast": "Matthew McConaughey, Anne Hathaway, Michael Caine",
                 "rating": "14",
@@ -919,10 +930,10 @@ query {
                 "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQmyAQu2hcbYkaBGOpDuU17xTTGILMFl4m0VfdMXI-sQ&s",
                 "countryOfOrigin": "United States of America",
                 "language": "English",
-                "keywords": "AÁ„o, Science, Fiction",
+                "keywords": "A√ß√£o, Science, Fiction",
                 "category": {
                     "id": 8,
-                    "name": "FicÁ„o"
+                    "name": "Fic√ß√£o"
                 }
             }
         }
@@ -932,14 +943,14 @@ query {
 
 ## Como Contribuir
 
-Se vocÍ deseja contribuir para este projeto, siga as etapas abaixo:
+Se voc√™ deseja contribuir para este projeto, siga as etapas abaixo:
 
-1. FaÁa um fork deste repositÛrio e clone-o em sua m·quina local.
-2. Crie um novo branch para suas alteraÁıes: `git checkout -b minha-branch`.
-3. Realize as alteraÁıes desejadas e commit-as: `git commit -m 'Minhas alteraÁıes'`.
-4. Envie suas alteraÁıes para o branch principal do repositÛrio forkado: `git push origin minha-branch`.
-5. Abra um pull request no repositÛrio original, descrevendo as alteraÁıes propostas.
+1. Fa√ßa um fork deste reposit√≥rio e clone-o em sua m√°quina local.
+2. Crie um novo branch para suas altera√ß√µes: `git checkout -b minha-branch`.
+3. Realize as altera√ß√µes desejadas e commit-as: `git commit -m 'Minhas altera√ß√µes'`.
+4. Envie suas altera√ß√µes para o branch principal do reposit√≥rio forkado: `git push origin minha-branch`.
+5. Abra um pull request no reposit√≥rio original, descrevendo as altera√ß√µes propostas.
 
-## LicenÁa
+## Licen√ßa
 
-Este projeto est· licenciado sob a **MIT License**.
+Este projeto est√° licenciado sob a **MIT License**.
